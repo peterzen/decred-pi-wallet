@@ -7,7 +7,7 @@ This is a guide for setting up a Decred cold wallet on the Raspberry Pi.
 1. Get the [Raspbian Lite image](https://www.raspberrypi.org/downloads/raspbian/) and [flash it onto a USB stick or SD card](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 
 
-2. If you want to do a headless installation (e.g. don't have a keyboard connected to the Pi) you can [enable SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/) before booting the Pi for the first time.  Note, that this way you won't have a 100% cold wallet.
+2. If you want to do a headless installation (e.g. don't have a keyboard connected to the Pi) you can [enable SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/) before booting the Pi for the first time.  Note that this way you won't have a 100% cold wallet.
 
 3. Log into the Pi for the first time and change your user password.  Set up SSH access if you need to log in remotely.
 
@@ -22,6 +22,8 @@ cd decred-pi-wallet
 
 5. If you want to run a cold wallet, you can now disconnect the network cable and carry on with creating your wallet offline.
 
-6. Run `./dcrd-setup.sh`.  This will configure the Decred suite of tools and once it finishes you can run `dcrd` and `dcrwallet` in local mode (it won't connect to any peers).  Proceed with creating your wallet: see [Offline wallets](https://github.com/chappjc/dcrwallet/blob/master/docs/offline_wallets.md)
+6. Run `./dcrd-setup.sh`.  This will configure the Decred suite of tools and once it finishes you can run `dcrd` and `dcrwallet` in local mode (`dcrd` won't connect to any peers).  
+
+7. Proceed with creating your wallet: see [Offline wallets](https://github.com/chappjc/dcrwallet/blob/master/docs/offline_wallets.md)
 
 
