@@ -17,7 +17,7 @@ sudo apt-get update
 sudo apt-get -y dist-upgrade
 
 # install required packages
-sudo apt-get -y install rng-tools rpi-update git jq
+sudo apt-get -y install rng-tools rpi-update jq
 
 # set up hardware RNG generator
 # http://fios.sector16.net/hardware-rng-on-raspberry-pi/
