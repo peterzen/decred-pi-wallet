@@ -5,8 +5,8 @@ DECRED_RELEASE=v0.8.2
 INSTALLER_BINARY=dcrinstall-linux-arm-$DECRED_RELEASE
 
 # set up locales so that the installation doesn't give us warnings
-echo 'LANGUAGE="en_GB.UTF-8"' | sudo tee -a /etc/default/locale
-echo 'LC_ALL="en_GB.UTF-8"' | sudo tee -a /etc/default/locale
+echo 'LANGUAGE="en_GB.UTF-8"' | sudo tee -a /etc/default/locale >/dev/null
+echo 'LC_ALL="en_GB.UTF-8"' | sudo tee -a /etc/default/locale >/dev/null
 
 # add Debian backports
 sudo apt-key adv   --keyserver keyserver.ubuntu.com --recv 7638D0442B90D010
