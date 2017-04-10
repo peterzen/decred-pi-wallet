@@ -19,8 +19,6 @@ curl -s https://raw.githubusercontent.com/peterzen/decred-pi-wallet/master/insta
 
 5. If you want to run a cold wallet, you can now disconnect the network cable and carry on with creating your wallet offline.
 
-6. Run `./dcrd-setup.sh`.  This will configure the Decred suite of tools and once it finishes you can run `dcrd` and `dcrwallet` in local mode (`dcrd` won't connect to any peers).  
-
-7. Proceed with creating your wallet: see [Offline wallets](https://github.com/chappjc/dcrwallet/blob/master/docs/offline_wallets.md)
+6. After the reboot, log back in and proceed with creating your wallet: see [Offline wallets](https://github.com/chappjc/dcrwallet/blob/master/docs/offline_wallets.md)
 
 

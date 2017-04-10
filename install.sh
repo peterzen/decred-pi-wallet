@@ -26,12 +26,36 @@ echo bcm2708-rng | sudo tee -a /etc/modules
 # update kernel to latest, this includes the RNG driver as well
 sudo rpi-update
 
+# create & populate decred configuration directories
+
+mkdir ~/.dcrd ~/.dcrwallet ~/.dcrctl
+
+RPC_PASSWORD=$(openssl rand -hex 32)
+
+tee .dcrd/dcrd.conf > /dev/null <<DCRD_CONF
+connect=127.0.0.1:12345
+listen=127.0.0.1
+rpclisten=127.0.0.1
+rpcuser=rpc
+rpcpass=$RPC_PASSWORD
+DCRD_CONF
+
+tee .dcrctl/dcrctl.conf > /dev/null <<DCRCTL_CONF
+rpcuser=rpc
+rpcpass=$RPC_PASSWORD
+DCRCTL_CONF
+
+tee .dcrwallet/dcrwallet.conf > /dev/null <<DCRWALLET_CONF
+username=rpc
+password=$RPC_PASSWORD
+DCRWALLET_CONF
+
+
 
 # set up Decred tools
 echo 'export PATH=/home/pi/decred:$PATH' >> ~/.bashrc
 . ~/.bashrc
 
-wget -q https://raw.githubusercontent.com/peterzen/decred-pi-wallet/master/dcrd-setup.sh && chmod +x ./dcrd-setup.sh
 
 echo Downloading Decred $DECRED_RELEASE installer
 wget -q https://github.com/decred/decred-release/releases/download/$DECRED_RELEASE/$INSTALLER_BINARY
