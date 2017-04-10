@@ -7,7 +7,7 @@ This is a guide for setting up a Decred cold wallet on the Raspberry Pi.
 1. Get the [Raspbian Lite image](https://www.raspberrypi.org/downloads/raspbian/) and [flash it onto a USB stick or SD card](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 
 
-2. If you want to do a headless installation (e.g. don't have a keyboard connected to the Pi) you can [enable SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/) before booting the Pi for the first time.  Note that this way you won't have a 100% cold wallet.
+2. If you want to perform a headless installation (e.g. don't have a keyboard connected to the Pi) you can [enable SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/) before booting the Pi for the first time.  Note that this way you won't have a 100% cold wallet.
 
 3. Log into the Pi for the first time and change your user password.  Set up SSH access if you need to log in remotely.
 

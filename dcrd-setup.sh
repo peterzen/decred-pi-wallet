@@ -2,7 +2,7 @@
 
 
 
-# start dcrd
+# create decred configuration directories & populate config files
 mkdir ~/.dcrd ~/.dcrwallet ~/.dcrctl
 
 RPC_PASSWORD=$(openssl rand -hex 32)
