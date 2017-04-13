@@ -11,14 +11,23 @@ This is a guide for setting up a Decred cold wallet on the Raspberry Pi.
 
 3. Log into the Pi for the first time and change your user password.  Set up SSH access if you need to log in remotely.
 
-4. Run the install script that will update the system, install all the required packages and configure the RNG.  After the upgrade and package installation is completed it will ask you to confirm the kernel upgrade - answer Yes.  Once the upgrade is finished, the Pi will reboot.
+4. Download the installer script and verify its SHA256 value:
 
 ```
-curl -s https://raw.githubusercontent.com/peterzen/decred-pi-wallet/master/install.sh | sh
+$ wget https://raw.githubusercontent.com/peterzen/decred-pi-wallet/master/install.sh
+$ sha256sum install.sh
+106472bd3b26dcde36473bba51377cdb90b517ade4407c5447c647b11894f281  install.sh
+
+```
+
+5. Run the install script that will update the system, install all the required packages and configure the RNG.  After the upgrade and package installation is completed, it will ask you to confirm the kernel upgrade - answer *Yes*.  Once the upgrade is finished, the Pi will reboot.
+
+```
+$ ./install.sh
 ````
 
-5. If you want to run a cold wallet, you can now disconnect the network cable and carry on with creating your wallet offline.
+6. If you want to run a cold wallet, you can now disconnect the network cable and carry on with creating your wallet offline.
 
-6. After the reboot, log back in and proceed with creating your wallet: see [Offline wallets](https://github.com/chappjc/dcrwallet/blob/master/docs/offline_wallets.md)
+7. After the reboot, log back in and proceed with creating your wallet: see [Offline wallets](https://github.com/chappjc/dcrwallet/blob/master/docs/offline_wallets.md)
 
 
