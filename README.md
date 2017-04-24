@@ -19,7 +19,7 @@ sha256sum install.sh
 
 ```
 
-5. Run the install script that will update the system, install all the required packages and configure the Pi's hardware random number generator (RNG).  After the upgrade and package installation is completed, it will ask you to confirm the kernel upgrade - answer *Yes*.  Once the upgrade is finished, the Pi will reboot.
+5. Run the install script that will update the system, install all the required packages and configure the Pi's [hardware random number generator (RNG)](http://fios.sector16.net/hardware-rng-on-raspberry-pi/).  After the upgrade and package installation is completed, it will ask you to confirm the kernel upgrade - answer *Yes*.  Once the upgrade is finished, the Pi will reboot.
 
 ```bash
 ./install.sh
