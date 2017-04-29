@@ -15,10 +15,10 @@ echo "deb http://ftp.debian.org/debian jessie-backports main" | sudo tee -a /etc
 
 # update distro to latest
 sudo apt-get update
-sudo apt-get -y dist-upgrade
+sudo apt-get -qy dist-upgrade
 
 # install required packages
-sudo apt-get -y install rng-tools rpi-update jq
+sudo apt-get -qy install rng-tools rpi-update jq
 
 # set up hardware RNG generator
 # http://fios.sector16.net/hardware-rng-on-raspberry-pi/
@@ -64,11 +64,11 @@ chmod +x $INSTALLER_BINARY
 ./$INSTALLER_BINARY
 
 
-echo 
+echo
 echo
 echo Disconnect your network cable now if you want to create your wallet in offline mode.
 echo
-echo Installation done, rebooting in a few seconds.  
+echo Installation done, rebooting in a few seconds.
 echo
 
 sleep 10
