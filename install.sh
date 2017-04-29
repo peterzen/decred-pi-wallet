@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-DECRED_RELEASE=v0.8.2
+DECRED_RELEASE=v1.0.1
 INSTALLER_BINARY=dcrinstall-linux-arm-$DECRED_RELEASE
 
 # set up locales so that the installation doesn't give us warnings
@@ -12,12 +12,13 @@ echo 'LC_ALL="en_GB.UTF-8"' | sudo tee -a /etc/default/locale >/dev/null
 sudo apt-key adv   --keyserver keyserver.ubuntu.com --recv 7638D0442B90D010
 echo "deb http://ftp.debian.org/debian jessie-backports main" | sudo tee -a /etc/apt/sources.list
 
+
 # update distro to latest
 sudo apt-get update
-sudo apt-get -y dist-upgrade
+sudo apt-get -qy dist-upgrade
 
 # install required packages
-sudo apt-get -y install rng-tools rpi-update jq
+sudo apt-get -qy install rng-tools rpi-update jq
 
 # set up hardware RNG generator
 # http://fios.sector16.net/hardware-rng-on-raspberry-pi/
@@ -63,11 +64,11 @@ chmod +x $INSTALLER_BINARY
 ./$INSTALLER_BINARY
 
 
-echo 
+echo
 echo
 echo Disconnect your network cable now if you want to create your wallet in offline mode.
 echo
-echo Installation done, rebooting in a few seconds.  
+echo Installation done, rebooting in a few seconds.
 echo
 
 sleep 10
