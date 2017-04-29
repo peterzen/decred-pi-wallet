@@ -12,16 +12,16 @@ This is a guide for setting up a [Decred](https://www.decred.org) cold wallet on
 
 4. Download the installer script and verify its SHA256 value:
 
-```bash
+````bash
 wget https://raw.githubusercontent.com/peterzen/decred-pi-wallet/master/install.sh
 sha256sum install.sh
-106472bd3b26dcde36473bba51377cdb90b517ade4407c5447c647b11894f281  install.sh
+e2e42e6f3ab90deb370d78c19e2c661fe803c5f8aa17cc5c4d335bcd3ff10382  install.sh
 
-```
+````
 
 5. Run the install script that will update the system, install all the required packages and configure the Pi's [hardware random number generator (RNG)](http://fios.sector16.net/hardware-rng-on-raspberry-pi/).  After the upgrade and package installation is completed, it will ask you to confirm the kernel upgrade - answer *Yes*.  Once the upgrade is finished, the Pi will reboot.
 
-```bash
+````bash
 ./install.sh
 ````
 
@@ -30,3 +30,8 @@ sha256sum install.sh
 7. After the reboot, log back in and proceed with creating your wallet: see [Offline wallets](https://github.com/chappjc/dcrwallet/blob/master/docs/offline_wallets.md) for more information.
 
 
+
+
+
+
+Donate if you like the project: `DsjfpcKZLzv159J4phPndmvmVCK8Wq5RPsd`
