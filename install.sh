@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-DECRED_RELEASE=v0.8.2
+DECRED_RELEASE=v1.0.1
 INSTALLER_BINARY=dcrinstall-linux-arm-$DECRED_RELEASE
 
 # set up locales so that the installation doesn't give us warnings
@@ -11,6 +11,7 @@ echo 'LC_ALL="en_GB.UTF-8"' | sudo tee -a /etc/default/locale >/dev/null
 # add Debian backports
 sudo apt-key adv   --keyserver keyserver.ubuntu.com --recv 7638D0442B90D010
 echo "deb http://ftp.debian.org/debian jessie-backports main" | sudo tee -a /etc/apt/sources.list
+
 
 # update distro to latest
 sudo apt-get update
