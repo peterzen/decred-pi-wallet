@@ -15,7 +15,7 @@ This is a guide for setting up a [Decred](https://www.decred.org) cold wallet on
 ````bash
 wget https://raw.githubusercontent.com/peterzen/decred-pi-wallet/master/install.sh
 sha256sum install.sh
-e2e42e6f3ab90deb370d78c19e2c661fe803c5f8aa17cc5c4d335bcd3ff10382  install.sh
+22ac71ae3eb4462c1e777b7b237dff9563831e3a29a49d2d19163517fb1b05ae  install.sh
 
 ````
 
