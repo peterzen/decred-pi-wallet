@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-DECRED_RELEASE=v1.0.3
+DECRED_RELEASE=v1.1.2
 
 DIST=decred-linux-arm-$DECRED_RELEASE
 TARBALL=$DIST.tar.gz
