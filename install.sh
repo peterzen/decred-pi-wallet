@@ -21,7 +21,18 @@ echo bcm2708_rng | sudo tee -a /etc/modules
 # update kernel to latest, this includes the RNG driver as well
 sudo rpi-update
 
+# install Decred binaries
+echo Downloading Decred $DECRED_RELEASE binary
+rm -f decred
+wget -q $DCRURL && \
+tar xzf $TARBALL && \
+ln -s $DIST decred && \
+rm -f $TARBALL
+
+
 # create & populate decred configuration directories
+
+umask 0077
 
 mkdir ~/.dcrd ~/.dcrwallet ~/.dcrctl
 
@@ -49,12 +60,6 @@ DCRWALLET_CONF
 echo 'export PATH=/home/pi/decred:$PATH' >> ~/.bashrc
 . ~/.bashrc
 
-echo Downloading Decred $DECRED_RELEASE binary
-rm -f decred
-wget -q $DCRURL && \
-tar xzf $TARBALL && \
-ln -s $DIST decred && \
-rm -f $TARBALL
 
 echo
 echo Installation completed, you can disconnect your network cable now.
