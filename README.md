@@ -34,4 +34,4 @@ sha256sum install.sh
 
 
 
-Donate if you like the project: `DsjfpcKZLzv159J4phPndmvmVCK8Wq5RPsd`
+Donate if you like the project: `DsSs1yBDvJXj4S74Vb3ECgAu8fPTFRRFPMd`
