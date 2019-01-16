@@ -12,7 +12,9 @@ This is a guide for setting up a [Decred](https://www.decred.org) cold wallet on
 
 4. Download the installer script and verify its SHA256 value:
 
-`wget https://raw.githubusercontent.com/peterzen/decred-pi-wallet/master/install.sh`
+````bash
+wget https://raw.githubusercontent.com/peterzen/decred-pi-wallet/master/install.sh
+````
 
 ````bash
 sha256sum install.sh
