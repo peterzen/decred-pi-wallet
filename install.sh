@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-DECRED_RELEASE=v1.3.1
+DECRED_RELEASE=v1.3.0
 
 DIST=decred-linux-arm-$DECRED_RELEASE
 TARBALL=$DIST.tar.gz
@@ -12,7 +12,7 @@ sudo apt-get update
 sudo apt-get -qy dist-upgrade
 
 # install required packages
-sudo apt-get -qy install rng-tools rpi-update jq
+sudo apt-get -qy install rng-tools rpi-update jq tmux
 
 # set up hardware RNG generator
 # http://fios.sector16.net/hardware-rng-on-raspberry-pi/
@@ -24,7 +24,7 @@ sudo rpi-update
 # install Decred binaries
 echo Downloading Decred $DECRED_RELEASE binary
 rm -f decred
-wget -q $DCRURL && \
+wget $DCRURL && \
 tar xzf $TARBALL && \
 ln -s $DIST decred && \
 rm -f $TARBALL

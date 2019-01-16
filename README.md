@@ -18,7 +18,7 @@ wget https://raw.githubusercontent.com/peterzen/decred-pi-wallet/master/install.
 
 ````bash
 sha256sum install.sh
-881bdd6921544da13c84e2b7189211140e557daa17684f3da05cfd9c59a557db  install.sh
+255718f627aa096f6f23111e08988939ad8e115a862c6473d821bb293c95ddcb  install.sh
 ````
 
 5. Run the install script that will update the system, install all the required packages and configure the Pi's [hardware random number generator (RNG)](http://fios.sector16.net/hardware-rng-on-raspberry-pi/).  After the upgrade and package installation is completed, it will ask you to confirm the kernel upgrade - answer *Yes*.  Once the upgrade is finished, the Pi will reboot.
